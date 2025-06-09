@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>История телефона</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      background: #e0e0e0;
+      padding: 0.5rem;
+    }
+    nav button {
+      padding: 0.5rem 1rem;
+      border: none;
+      background: #4CAF50;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    section {
+      display: none;
+      padding: 1rem;
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      margin-top: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    section.active {
+      display: block;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>История создания телефона</h1>
+  </header>
+
+  <nav>
+    <button onclick="showSection('intro')">Введение</button>
+    <button onclick="showSection('prehistory')">До телефона</button>
+    <button onclick="showSection('invention')">Изобретение</button>
+    <button onclick="showSection('evolution')">Эволюция</button>
+    <button onclick="showSection('modern')">Современность</button>
+    <button onclick="showSection('quiz')">Тест</button>
+  </nav>
+
+  <section id="intro" class="active">
+    <h2>Введение</h2>
+    <p>Телефон — одно из важнейших изобретений, кардинально изменившее способ общения между людьми. Он позволил преодолеть расстояния и ускорил обмен информацией.</p>
+  </section>
+
+  <section id="prehistory">
+    <h2>Доисторические формы связи</h2>
+    <p>До появления телефона люди использовали сигналы, дым, барабаны, почтовых голубей и другие способы передачи сообщений.</p>
+  </section>
+
+  <section id="invention">
+    <h2>Изобретение телефона</h2>
+    <p>Телефон был официально запатентован Александром Беллом в 1876 году, однако итальянский изобретатель Антонио Меуччи разработал подобное устройство раньше. Вопрос об авторстве долгое время оставался спорным.</p>
+  </section>
+
+  <section id="evolution">
+    <h2>Эволюция телефонов</h2>
+    <p>От первых стационарных моделей с дисковым набором до кнопочных телефонов, далее — мобильные устройства и, наконец, современные смартфоны, совмещающие в себе множество функций.</p>
+  </section>
+
+  <section id="modern">
+    <h2>Современные технологии</h2>
+    <p>Сегодня телефоны поддерживают видеозвонки, подключаются к интернету, работают в сетях 4G/5G и позволяют использовать приложения для любых целей — от работы до развлечений.</p>
+  </section>
+
+  <section id="quiz">
+    <h2>Мини-тест</h2>
+    <p><strong>Кто считается официальным изобретателем телефона?</strong></p>
+    <ul>
+      <li onclick="alert('Правильно!')">Александр Белл</li>
+      <li onclick="alert('Неправильно, но близко!')">Антонио Меуччи</li>
+      <li onclick="alert('Неправильно!')">Томас Эдисон</li>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; 2025 Электронный учебник | Создан с душой 💚
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
